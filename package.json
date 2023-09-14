@@ -3,22 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "yarn run open-browser && next dev",
+    "open-browser": "start http://localhost:3000",
+    "build:development": "next build  && next export -o out-development/",
+    "build:production": "next build  && next export -o out/",
+    "build:localhost": "next build  && next export -o out-local/",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:prod": "env-cmd -f .env yarn build:production",
+    "build:dev": "env-cmd -f .env.development yarn build:development",
+    "build:local": "env-cmd -f .env.local yarn build:localhost"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "clsx": "^2.0.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.1.2",
+    "redux-logger": "^3.0.6",
+    "scss": "^0.2.4",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   }

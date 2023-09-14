@@ -1,113 +1,157 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="profile-page">
+      <section className="relative block h-500-px">
+        <div
+          className="absolute top-0 w-full h-full bg-center bg-cover"
+          style={{
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80")',
+          }}
+        >
+          <span
+            id="blackOverlay"
+            className="w-full h-full absolute opacity-50 bg-black"
+          />
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
+          style={{ transform: "translateZ(0px)" }}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <svg
+            className="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x={0}
+            y={0}
+          >
+            <polygon
+              className="text-blueGray-200 fill-current"
+              points="2560 0 2560 100 0 100"
+            />
+          </svg>
+        </div>
+      </section>
+      <section className="relative py-16 bg-blueGray-200">
+        <div className="container mx-auto px-4">
+          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+            <div className="px-6">
+              <div className="flex flex-wrap justify-center">
+                <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                  <div className="relative">
+                    <Image
+                    width={0}
+                    height={0}
+                      alt="..."
+                      src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg"
+                      className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                  <div className="py-6 px-3 mt-32 sm:mt-0">
+                    <button
+                      className="bg-pink-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                    >
+                      Connect
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4 lg:order-1">
+                  <div className="flex justify-center py-4 lg:pt-4 pt-8">
+                    <div className="mr-4 p-3 text-center">
+                      <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
+                        22
+                      </span>
+                      <span className="text-sm text-blueGray-400">Friends</span>
+                    </div>
+                    <div className="mr-4 p-3 text-center">
+                      <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
+                        10
+                      </span>
+                      <span className="text-sm text-blueGray-400">Photos</span>
+                    </div>
+                    <div className="lg:mr-4 p-3 text-center">
+                      <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
+                        89
+                      </span>
+                      <span className="text-sm text-blueGray-400">
+                        Comments
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center mt-12">
+                <h3 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                  Jenna Stones
+                </h3>
+                <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                  <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400" />
+                  Los Angeles, California
+                </div>
+                <div className="mb-2 text-blueGray-600 mt-10">
+                  <i className="fas fa-briefcase mr-2 text-lg text-blueGray-400" />
+                  Solution Manager - Creative Tim Officer
+                </div>
+                <div className="mb-2 text-blueGray-600">
+                  <i className="fas fa-university mr-2 text-lg text-blueGray-400" />
+                  University of Computer Science
+                </div>
+              </div>
+              <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
+                <div className="flex flex-wrap justify-center">
+                  <div className="w-full lg:w-9/12 px-4">
+                    <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
+                      An artist of considerable range, Jenna the name taken by
+                      Melbourne-raised, Brooklyn-based Nick Murphy writes,
+                      performs and records all of his own music, giving it a
+                      warm, intimate feel with a solid groove structure. An
+                      artist of considerable range.
+                    </p>
+                    <a href="#pablo" className="font-normal text-pink-500">
+                      Show more
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer className="relative bg-blueGray-200 pt-8 pb-6 mt-8">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap items-center md:justify-between justify-center">
+              <div className="w-full md:w-6/12 px-4 mx-auto text-center">
+                <div className="text-sm text-blueGray-500 font-semibold py-1">
+                  Made with{" "}
+                  <a
+                    href="https://www.creative-tim.com/product/notus-js"
+                    className="text-blueGray-500 hover:text-gray-800"
+                    target="_blank"
+                  >
+                    Notus JS
+                  </a>{" "}
+                  by{" "}
+                  <a
+                    href="https://www.creative-tim.com"
+                    className="text-blueGray-500 hover:text-blueGray-800"
+                    target="_blank"
+                  >
+                    {" "}
+                    Creative Tim
+                  </a>
+                  .
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
     </main>
-  )
+  );
 }

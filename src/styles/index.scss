@@ -1,0 +1,22 @@
+
+@import './_variable';
+@import './global.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    width: 100% !important;
+    color: $color-black;
+    overflow-y: scroll;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    background: $color-NeutralGrey;
+    font-size: $text-base;
+    line-height: 20px;
+    scroll-behavior: smooth;
+} 
